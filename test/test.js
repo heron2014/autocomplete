@@ -14,7 +14,19 @@ assert.equal(typeof ac, 'object');
 assert.equal(typeof ac.import, 'function');
 
 console.log('###ac.import imports list of words into memory');
-ac.import(function (words) {
+ac.import(function (words) { //this is our callback function
 	console.log('words.txt had' + words.length + 'words in it');
 	assert.equal(words.length, 99171);
+});
+
+console.log('#attempt to invke ac.import without a valid callback');
+var error = ac.import('string');
+assert.equal(error.message, 'callback arguments must be a function');
+
+console.log('#ac.findWords finds a string in words array');
+ac.import(function() {
+	ac.findWords('awes', function (err, found) {
+	assert.equal(err, null);
+	assert.equal(found.length, 10);
+	})
 });
