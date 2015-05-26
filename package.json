@@ -1,0 +1,26 @@
+{
+  "name": "autocomplete-fac",
+  "version": "0.0.0",
+  "description": "find words in English dictionary with autosuggestion!",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "node test/test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/heron2014/autocomplete.git"
+  },
+  "keywords": [
+    "autocomplete",
+    "english",
+    "suggestions"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/heron2014/autocomplete/issues"
+  }
+}
